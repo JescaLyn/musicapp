@@ -1,0 +1,14 @@
+<section>
+  <p>
+    <%= note.body %>
+  </p>
+
+  <p>
+    Authored by: <%= User.find_by(id: note.user_id).email %>
+  </p>
+
+  <p>
+    <%= button_to "Destroy note", note_url(note), method: :delete %>
+  </p>
+
+</section>
